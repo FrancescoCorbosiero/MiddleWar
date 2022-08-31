@@ -1,0 +1,67 @@
+Report main requirements:
+- description of the goal(s) of the project (problems to be solved, constraints)
+- assumptions, methods, procedures
+- motivations of the design choices
+- logical structure of the solution
+- implementation
+- testing and results
+- possible improvements
+
+
+Goal of the project is to design and develop a multiplayer 2D tower defense minigame within the use of "pygame" library,
+which provides almost an "engine" for creating videogames with python language.
+
+Game design is composed of 2 specular teams fighting each other to destroy enemy tower and invade him in order to win by
+dispatching combat troops which can hit and damage the enemy building.
+Each team is composed by 3 main buildings:
+    -Mine: provides the resources (gold) which can be used to recruit troops
+    -Barrack: used to train and dispatch troops
+    -Tower: provides defense from enemies but can attack too
+There are 3 types of troops:
+    -Worker: can either extract resources from mine or repair tower
+    -Swordsman: tanky combat troop which attack from short range
+    -Archer: long range combat troop, deals more damage than swordsman but he is very vulnerable
+Game dynamics are not "turn based" but real-time so each player would be able to train and dispatch many troops
+as long as they have the resources(that can be extracted by workers from mines).
+The first player that manages to destroy enemy tower wins the game.
+Player must have the possibility to pause and save the game at any time.
+
+Since game design is quite simple, pygame seems to suit well.
+What is needed is to tie many pygame entities(called "Rect" from specifications) to each logical entity described before.
+Pygame Rect is basically a rectangle drawn on screen that can have many properties and behaviors according to how it is coded.
+Now development is composed by 3 main parts:
+    -Entities
+    -Combat dynamics
+    -Game dynamics
+
+1) Entities
+Adopting the concept of entities in the game leads to the development of classes and objects, so the game is OO(Object Oriented).
+Classes are described in the "entities.py" file.
+
+[schema gerarchia classi]
+
+2)Combat dynamics
+
+[schema dinamiche del gioco]
+
+3)Game dynamics
+
+[schema dinamica del gioco (handle_key, handle_event, ecc...)]
+
+
+The design described since now actually creates the game core functionalities and can work by itself but lacks of a proper
+game graphics.
+Pygame provides many APIs for loading images and more in order to create the actual game graphics.
+To achieve a proper graphic for the game every entity needs a new property (IMAGE) which points to a resource on the file system,
+that is the graphic that will be drawn on screen.
+Now that even graphics were implemented the game is complete.
+
+
+
+
+
+
+
+
+
+
