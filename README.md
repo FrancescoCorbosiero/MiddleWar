@@ -62,7 +62,9 @@ This is just a demo project. Feel free to download and use the project as you wi
 
 ## Pygame library
 Pygame allows you to develop simple games in python in a short time.
-Here's the main site!: https://www.pygame.org/news
+
+Here's the main site: https://www.pygame.org/news
+
 And here's the docs: https://www.pygame.org/docs/
 
 Enjoy!
